@@ -36,7 +36,7 @@ public class AppDbConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(
             EntityManagerFactoryBuilder builder,
             @Qualifier("appDataSource") DataSource dataSource) {
-        Flyway.configure()T
+        Flyway.configure()
                 .dataSource(dataSource)
                 .locations("db/migration/app")
                 .load()
